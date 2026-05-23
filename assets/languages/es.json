@@ -1,0 +1,39 @@
+{
+    "language": "Idioma",
+
+    "HeroSection": {
+        "welcome": "Bienvenido",
+        "intro": "Soy ",
+        "position": "Desarrollador de Software"
+    },
+
+    "AboutSection": {
+
+        "title": "Sobre mí",
+
+        "stats": {
+            "stat_1": "Fiable",
+            "stat_2": "Positivo",
+            "stat_3": "Seguro"
+        },
+
+        "about_me": "Me caracterizo por mantener una actitud positiva y fomentar un ambiente de trabajo agradable. Poseo una gran capacidad para resolver problemas y afrontar desafíos con perseverancia, manteniendo siempre la motivación y el compromiso hasta alcanzar los objetivos propuestos."
+    },
+
+    "NavBar": {
+        "links": {
+            "link_1": "Inicio",
+            "link_2": "Sobre mí"
+        }
+    },
+
+    "SkillsBar": {
+        "skills":
+        {
+            "skill_1": "Lenguajes de Programación",
+            "skill_2": "Bases de Datos",
+            "skill_3": "Tecnologías",
+            "skill_4": "Github"
+        }
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "language": "Language",
+
+    "HeroSection": {
+        "welcome": "Welcome",
+        "intro": "I'm ",
+        "position": "Software Developer"
+    },
+
+    "AboutSection": {
+
+        "title": "About me",
+
+        "stats": {
+            "stat_1": "Reliable",
+            "stat_2": "Positive",
+            "stat_3": "Confident"
+        },
+
+        "about_me": "I am known for maintaining a positive attitude and fostering a pleasant work environment. I have a strong ability to solve problems and tackle challenges with perseverance, always staying motivated and committed until I achieve my goals."
+    },
+
+    "NavBar": {
+        "links": {
+            "link_1": "Home",
+            "link_2": "About"
+        }
+    },
+
+    "SkillsBar": {
+        "skills":
+        {
+            "skill_1": "Programing Languages", 
+            "skill_2": "Data Bases", 
+            "skill_3": "Tecnologies", 
+            "skill_4": "Github"
+        }
+    }
+}
