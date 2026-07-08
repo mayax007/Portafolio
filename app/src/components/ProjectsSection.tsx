@@ -13,8 +13,12 @@ export default function ProjectsSection() {
 
   // El ancho de la lista escala con el ancho de la ventana en vez de ser
   // constante: reactivo al máximo de la pantalla, manteniendo la proporción.
+  // Durante el export estático (Vercel) no existe `window`, así que
+  // useWindowDimensions devuelve 0; en ese caso dejamos la lista sin tope
+  // (undefined) para que ocupe el ancho de su columna en vez de colapsar a 0
+  // y ocultar el texto de las tarjetas.
   const { width: windowWidth } = useWindowDimensions();
-  const listWidth = windowWidth * LIST_WIDTH_RATIO;
+  const listWidth = windowWidth > 0 ? windowWidth * LIST_WIDTH_RATIO : undefined;
 
   // Los proyectos viven en en.json / es.json (ProjectsSection.projects),
   // así se traducen junto al resto de la página.
@@ -24,7 +28,7 @@ export default function ProjectsSection() {
     <View style={styles.container}>
       <Text style={styles.heading}>{t('ProjectsSection.title')}</Text>
 
-      <View style={[styles.list, { width: listWidth }]}>
+      <View style={[styles.list, listWidth ? { maxWidth: listWidth } : null]}>
         {data.map((proyecto) => (
           <ProjectCard key={proyecto.id} proyecto={proyecto} />
         ))}
