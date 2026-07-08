@@ -20,6 +20,24 @@
         "about_me": "Me caracterizo por mantener una actitud positiva y fomentar un ambiente de trabajo agradable. Poseo una gran capacidad para resolver problemas y afrontar desafíos con perseverancia, manteniendo siempre la motivación y el compromiso hasta alcanzar los objetivos propuestos."
     },
 
+    "ProjectsSection": {
+        "title": "Proyectos",
+        "projects": [
+            {
+                "id": "portafolio",
+                "nombre": "Portafolio personal con React Native + Expo (web)",
+                "descripcion": "Sitio web responsive construido con Expo Router y react-native-web.",
+                "url": "https://github.com/mayax007/Portafolio"
+            },
+            {
+                "id": "Playground-React",
+                "nombre": "Playground de react",
+                "descripcion": "Una pagina web diseñada en react para enseñar caracteristicas de react y como funcionan a nivel interno.",
+                "url": "https://github.com/mayax007"
+            }
+        ]
+    },
+
     "NavBar": {
         "links": {
             "link_1": "Inicio",

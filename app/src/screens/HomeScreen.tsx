@@ -3,6 +3,7 @@ import { ScrollView, StyleSheet, View } from 'react-native';
 import AboutSection from '../components/AboutSection';
 import HeroSection from '../components/HeroSection';
 import Navbar from '../components/Navbar';
+import ProjectsSection from '../components/ProjectsSection';
 import SkillsBar from '../components/SkillsBar';
 import { colors } from '../theme/colors';
 
@@ -13,8 +14,16 @@ export default function HomeScreen() {
         <Navbar />
         <HeroSection />
         <SkillsBar />
+        {/* Fila en dos columnas: proyectos a la izquierda, "Sobre mí" a la
+            derecha. AboutSection ya alinea su contenido a la derecha. */}
         <View style={styles.aboutRow}>
-          <AboutSection />
+          <View style={styles.projectsCol}>
+            <ProjectsSection />
+            
+          </View>
+          <View style={styles.aboutCol}>
+            <AboutSection />
+          </View>
         </View>
       </ScrollView>
     </View>
@@ -33,8 +42,20 @@ const styles = StyleSheet.create({
     minWidth: 1024,
   },
   aboutRow: {
-    position: 'relative',
+    flexDirection: 'row',
+    alignItems: 'flex-start',
     backgroundColor: colors.background,
     minHeight: 400,
+  },
+  projectsCol: {
+    margin: 30,
+    borderRadius: 55,
+    borderWidth: 1,
+    borderColor: colors.border,
+    flex: 1.75,
+  },
+  aboutCol: {
+    marginTop: 30,
+    flex: 1,
   },
 });

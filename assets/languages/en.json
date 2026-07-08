@@ -20,6 +20,24 @@
         "about_me": "I am known for maintaining a positive attitude and fostering a pleasant work environment. I have a strong ability to solve problems and tackle challenges with perseverance, always staying motivated and committed until I achieve my goals."
     },
 
+    "ProjectsSection": {
+        "title": "Projects",
+        "projects": [
+            {
+                "id": "portafolio",
+                "nombre": "Personal portfolio with React Native + Expo (web)",
+                "descripcion": "Responsive website built with Expo Router and react-native-web, deployed on GitHub Pages.",
+                "url": "https://github.com/mayax007/Portafolio"
+            },
+            {
+                "id": "Playground-React",
+                "nombre": "Playground de react",
+                "descripcion": "Web page design for learning react and It's caracteristics in depth. Only in spanish ATM",
+                "url": "https://github.com/mayax007"
+            }
+        ]
+    },
+
     "NavBar": {
         "links": {
             "link_1": "Home",
