@@ -4,7 +4,30 @@
     "HeroSection": {
         "welcome": "Welcome",
         "intro": "I'm ",
-        "position": "Software Developer"
+        "position": "Software Developer",
+        "carousel_label": "What I do",
+        "carousel": [
+            {
+                "title": "Full Stack Development",
+                "text": "I have built multiple web pages & mobile apps for projects such as this one.",
+                "image": ""
+            },
+            {
+                "title": "APIs & databases",
+                "text": "Full design process and integration of services with Spring Boot / NestJS over SQL databases, from the E/R diagram to deployment.",
+                "image": ""
+            },
+            {
+                "title": "Experience on SaaS",
+                "text": "I have deployed multiple web pages and apps on the cloud (mainly AWS) with full functionality and minimal hiccups during deployment.",
+                "image": ""
+            },
+            {
+                "title": "Collaborative",
+                "text": "Throughout my career I have almost always worked in a team & had the opportunity to work with amazing & wonderful people who I have learned a lot from.",
+                "image": ""
+            }
+        ]
     },
 
     "AboutSection": {
@@ -32,7 +55,7 @@
             {
                 "id": "Playground-React",
                 "nombre": "Playground de react",
-                "descripcion": "Web page design for learning react and It's caracteristics in depth. Only in spanish ATM",
+                "descripcion": "Web page design for learning React and its characteristics in depth. Only in Spanish ATM.",
                 "url": "https://github.com/mayax007"
             }
         ]
@@ -48,10 +71,34 @@
     "SkillsBar": {
         "skills":
         {
-            "skill_1": "Programing Languages", 
-            "skill_2": "Data Bases", 
-            "skill_3": "Tecnologies", 
+            "skill_1": "Programming Languages",
+            "skill_2": "Databases",
+            "skill_3": "Technologies",
             "skill_4": "Github"
+        },
+        "descriptions": {
+            "TypeScript": "Typed superset of JavaScript that catches errors early and scales large codebases.",
+            "Python": "Versatile language for scripting, automation, data and back-end services.",
+            "JavaScript": "The language of the web, used for interactive front-ends and Node.js back-ends.",
+            "Java": "Robust, object-oriented language widely used for enterprise back-ends.",
+            "Html": "Markup language that defines the structure and content of web pages.",
+            "Css": "Styles and lays out web pages: colors, spacing and responsive design.",
+            "PostgreSQL": "Powerful open-source relational database with advanced SQL features.",
+            "MariaDB": "Open-source relational database, a community-driven fork of MySQL.",
+            "Oracle": "Enterprise relational database used in large, mission-critical systems.",
+            "MySQL": "Popular open-source relational database for web applications.",
+            "React Native": "Framework for building native mobile (and web) apps with React.",
+            "Docker": "Packages apps into containers so they run the same anywhere.",
+            "Springboot": "Java framework for building REST APIs and back-end services quickly.",
+            "NodeJS": "JavaScript runtime for building fast, scalable server-side apps.",
+            "NestJS": "Structured Node.js framework for building maintainable back-ends.",
+            "Npm": "Package manager for JavaScript to install and manage dependencies.",
+            "Expo": "Toolkit that speeds up building and deploying React Native apps.",
+            "AWS": "Amazon's cloud platform for hosting, storage and deploying services.",
+            "Maven": "Build and dependency management tool for Java projects.",
+            "Gradle": "Flexible build automation tool for Java and Android projects.",
+            "Git": "Version control system to track changes and collaborate on code.",
+            "Github": "Platform to host Git repositories and collaborate on projects."
         }
     }
 }

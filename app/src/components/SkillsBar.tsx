@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, TouchableOpacity, View, Linking } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { useTranslation } from './LanguageContext';
 import { colors } from '../theme/colors';
 import skillsdata from '../../../assets/data/skills.json';
 import SkillsPanel from './SkillsPanel';
+import ExternalLink from './ExternalLink';
 
 type SkillKey = 'programming' | 'db' | 'tech' | 'github';
  
@@ -19,32 +20,39 @@ export default function SkillsBar() {
   const [activeKey, setActiveKey] = useState<SkillKey | null>('programming');
 
   const SKILLS: string[] = Object.values(t('SkillsBar.skills') as Record<string, string>);
-
-  const handlePress = (key: SkillKey) => {
-    if (key === 'github') {
-      Linking.openURL((skillsdata.github as { url: string }).url);
-      return;
-    }
-    setActiveKey(key);
-  };
+  const githubUrl = (skillsdata.github as { url: string }).url;
 
   return (
     <View>
       <View style={styles.container}>
         {SKILL_KEYS.map((key, index) => {
           const isActive = activeKey === key;
+          // El resto de pestañas cambian el panel; "github" es un enlace externo,
+          // así que se renderiza como ExternalLink (ancla real) para que funcione
+          // también en el despliegue de Vercel.
+          const label = (
+            <>
+              <Text style={[styles.skill, isActive && styles.skillActive]}>
+                {SKILLS[index]}
+              </Text>
+              {isActive && <View style={styles.activeUnderline} />}
+            </>
+          );
           return (
             <React.Fragment key={key}>
-              <TouchableOpacity
-                style={styles.skillWrap}
-                onPress={() => handlePress(key)}
-                activeOpacity={0.7}
-              >
-                <Text style={[styles.skill, isActive && styles.skillActive]}>
-                  {SKILLS[index]}
-                </Text>
-                {isActive && <View style={styles.activeUnderline} />}
-              </TouchableOpacity>
+              {key === 'github' ? (
+                <ExternalLink url={githubUrl} style={styles.skillWrap}>
+                  {label}
+                </ExternalLink>
+              ) : (
+                <TouchableOpacity
+                  style={styles.skillWrap}
+                  onPress={() => setActiveKey(key)}
+                  activeOpacity={0.7}
+                >
+                  {label}
+                </TouchableOpacity>
+              )}
               {index < SKILL_KEYS.length - 1 && (
                 <View style={styles.separator} />
               )}

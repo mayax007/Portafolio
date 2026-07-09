@@ -4,7 +4,30 @@
     "HeroSection": {
         "welcome": "Bienvenido",
         "intro": "Soy ",
-        "position": "Desarrollador de Software"
+        "position": "Desarrollador de Software",
+        "carousel_label": "Que eh hecho",
+        "carousel": [
+            {
+                "title": "Desarrollo Full Stack",
+                "text": "He construido múltiples páginas web y apps móviles para proyectos como este.",
+                "image": ""
+            },
+            {
+                "title": "APIs y bases de datos",
+                "text": "Diseño completo e integración de servicios con Spring Boot / NestJS sobre bases de datos SQL, desde el diagrama E/R hasta el despliegue.",
+                "image": ""
+            },
+            {
+                "title": "Experiencia en SaaS",
+                "text": "He desplegado múltiples páginas web y apps en la nube (principalmente AWS) con plena funcionalidad y mínimos contratiempos durante el despliegue.",
+                "image": ""
+            },
+            {
+                "title": "Colaborativo",
+                "text": "A lo largo de mi carrera casi siempre he trabajado en equipo y he tenido la oportunidad de trabajar con personas increíbles y maravillosas de las que he aprendido mucho.",
+                "image": ""
+            }
+        ]
     },
 
     "AboutSection": {
@@ -32,7 +55,7 @@
             {
                 "id": "Playground-React",
                 "nombre": "Playground de react",
-                "descripcion": "Una pagina web diseñada en react para enseñar caracteristicas de react y como funcionan a nivel interno.",
+                "descripcion": "Una página web diseñada en React para enseñar características de React y cómo funcionan a nivel interno.",
                 "url": "https://github.com/mayax007"
             }
         ]
@@ -52,6 +75,30 @@
             "skill_2": "Bases de Datos",
             "skill_3": "Tecnologías",
             "skill_4": "Github"
+        },
+        "descriptions": {
+            "TypeScript": "Superset tipado de JavaScript que detecta errores antes y escala proyectos grandes.",
+            "Python": "Lenguaje versátil para scripting, automatización, datos y back-end.",
+            "JavaScript": "El lenguaje de la web, para front-ends interactivos y back-ends con Node.js.",
+            "Java": "Lenguaje robusto y orientado a objetos, muy usado en back-ends empresariales.",
+            "Html": "Lenguaje de marcado que define la estructura y el contenido de las páginas web.",
+            "Css": "Da estilo y maqueta las páginas web: colores, espaciado y diseño responsive.",
+            "PostgreSQL": "Base de datos relacional open-source y potente, con SQL avanzado.",
+            "MariaDB": "Base de datos relacional open-source, un fork comunitario de MySQL.",
+            "Oracle": "Base de datos relacional empresarial para sistemas grandes y críticos.",
+            "MySQL": "Base de datos relacional open-source muy popular en aplicaciones web.",
+            "React Native": "Framework para crear apps móviles (y web) nativas con React.",
+            "Docker": "Empaqueta aplicaciones en contenedores para que funcionen igual en cualquier sitio.",
+            "Springboot": "Framework de Java para crear APIs REST y servicios back-end rápidamente.",
+            "NodeJS": "Entorno de JavaScript para construir servidores rápidos y escalables.",
+            "NestJS": "Framework estructurado de Node.js para back-ends mantenibles.",
+            "Npm": "Gestor de paquetes de JavaScript para instalar y administrar dependencias.",
+            "Expo": "Conjunto de herramientas que agiliza crear y desplegar apps React Native.",
+            "AWS": "Plataforma cloud de Amazon para alojar, almacenar y desplegar servicios.",
+            "Maven": "Herramienta de construcción y gestión de dependencias para proyectos Java.",
+            "Gradle": "Herramienta flexible de automatización de builds para Java y Android.",
+            "Git": "Sistema de control de versiones para registrar cambios y colaborar en el código.",
+            "Github": "Plataforma para alojar repositorios Git y colaborar en proyectos."
         }
     }
 }

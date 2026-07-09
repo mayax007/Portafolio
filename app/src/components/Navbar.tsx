@@ -5,7 +5,15 @@ import { colors } from '../theme/colors';
 import LanguageSelector from './LanguageSelector';
 import { LangCode } from './i18n';
 
-export default function Navbar() {
+// Los enlaces del navbar hacen scroll a una sección. El orden coincide con
+// NavBar.links en las traducciones: 0 -> Inicio (hero), 1 -> Sobre mí (about).
+type Props = {
+  onNavigate?: (target: 'home' | 'about') => void;
+};
+
+const LINK_TARGETS: ('home' | 'about')[] = ['home', 'about'];
+
+export default function Navbar({ onNavigate }: Props) {
   const { t, lang, setLanguage } = useTranslation();
 
   const NAV_LINKS: string[] = Object.values(t('NavBar.links') as Record<string, string>);
@@ -16,7 +24,10 @@ export default function Navbar() {
 
       <View style={styles.links}>
         {NAV_LINKS.map((link, index) => (
-          <TouchableOpacity key={index}>
+          <TouchableOpacity
+            key={index}
+            onPress={() => onNavigate?.(LINK_TARGETS[index] ?? 'home')}
+          >
             <Text style={styles.link}>{link}</Text>
           </TouchableOpacity>
         ))}

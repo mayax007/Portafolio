@@ -1,7 +1,8 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import { useTranslation } from './LanguageContext';
 import { colors } from '../theme/colors';
+import HeroCarousel from './HeroCarousel';
 
 export default function HeroSection() {
   const { t } = useTranslation();
@@ -17,9 +18,8 @@ export default function HeroSection() {
         <Text style={styles.title}>{t('HeroSection.position')}</Text>
       </View>
 
-      <View style={styles.codeWarp}>
-        <Text style={styles.codingText}>{'<StartWebpage \n style={styles.codeText} \n key="a113"/>'}</Text>
-      </View>
+      {/* Pasarela editable desde en.json / es.json (HeroSection.carousel). */}
+      <HeroCarousel />
 
     </View>
   );
@@ -71,20 +71,5 @@ const styles = StyleSheet.create({
     fontWeight: '800',
     letterSpacing: 1,
     marginBottom: 40,
-  },
-  codeWarp: {
-    width: 480,
-    height: 360,
-    alignItems: 'center',
-    justifyContent: 'center',
-    position: 'relative',
-  },
-  codingText: {
-    position: 'absolute',
-    left: 0,
-    color: colors.accent,
-    fontSize: 48,
-    opacity: 0.4,
-    fontWeight: '100',
   },
 });

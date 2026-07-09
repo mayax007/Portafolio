@@ -1,7 +1,8 @@
 import { Ionicons } from '@expo/vector-icons';
 import React, { useState } from 'react';
-import { Linking, Pressable, StyleSheet, Text, View } from 'react-native';
+import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { colors } from '../theme/colors';
+import ExternalLink from './ExternalLink';
 
 export type Proyecto = {
   id: string;
@@ -16,11 +17,6 @@ type Props = {
 
 export default function ProjectCard({ proyecto }: Props) {
   const [expanded, setExpanded] = useState(false);
-
-  const abrirEnlace = () => {
-    // Linking.openURL funciona tanto en web como en nativo.
-    Linking.openURL(proyecto.url);
-  };
 
   return (
     <View style={styles.card}>
@@ -38,20 +34,19 @@ export default function ProjectCard({ proyecto }: Props) {
           {proyecto.nombre}
         </Text>
 
-        {/* Botón-icono: abre la url. Es un Pressable anidado, así que al
-            pulsarlo se abre el enlace sin disparar el toggle del encabezado. */}
-        <Pressable
-          onPress={abrirEnlace}
+        {/* Botón-icono: abre la url. Es un ancla anidada (ExternalLink), así que
+            al pulsarlo se abre el enlace sin disparar el toggle del encabezado. */}
+        <ExternalLink
+          url={proyecto.url}
           // flexShrink: 0 + ancho fijo -> el botón nunca se comprime ni se
           // deforma aunque el nombre crezca. alignSelf: 'flex-start' (vía el
           // alignItems del header) lo mantiene arriba a la derecha sin saltar.
           style={styles.iconButton}
           hitSlop={8}
-          accessibilityRole="link"
           accessibilityLabel={`Abrir ${proyecto.nombre}`}
         >
           <Ionicons name="open-outline" size={20} color={colors.accent} />
-        </Pressable>
+        </ExternalLink>
       </Pressable>
       {expanded && (
         <>
